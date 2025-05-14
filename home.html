@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Memorial Gifts and Keepsakes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    .top-bar {
+      background-color: #00b0f0;
+      color: white;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    .header-icons i {
+      font-size: 1.2rem;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+    .logo {
+      max-height: 80px;
+    }
+    .main-heading {
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+    .highlight {
+      color: #f7b731;
+      font-weight: bold;
+    }
+    .hero-image {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+    }
+    #cartDrawer {
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .cart-item-img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .cart-item {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar py-1">
+    FREE SHIPPING on USA orders OVER $72!
+  </div>
+
+  <!-- Header -->
+  <div class="container-fluid py-2 border-bottom">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <i class="bi bi-truck"></i>
+        <span class="ms-2 fw-bold">FREE SHIPPING</span>
+        <span class="ms-1">on Orders Over $72</span>
+      </div>
+      <div class="text-center">
+        <img src="https://www.whitneyhowarddesigns.com/cdn/shop/files/WHD24_Logo_Blue_1332x900_1c55a208-e767-4f08-9cd0-8bffb3ee9ca6.png?v=1731454762" alt="Whitney Howard Designs" class="logo" />
+      </div>
+      <div class="header-icons d-flex align-items-center">
+        <span class="me-2">818.884.8478</span>
+        <i class="bi bi-search"></i>
+        <i class="bi bi-person"></i>
+        <i class="bi bi-bag" onclick="toggleCart(true)">
+          <span class="badge bg-primary rounded-circle">2</span>
+        </i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Shop by Theme</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blessing Rings</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">WHD Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Videos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Wholesale</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Design Your Own</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h1 class="main-heading">Pet Memorial Gifts and Keepsakes</h1>
+      <div class="row mt-4 align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="https://cdn.shopify.com/s/files/1/0169/6150/files/WHD2027_HeartRock_FRONT_480x480.jpg?v=1590680290" class="hero-image" alt="Assorted heart rocks next to each other">
+        </div>
+        <div class="col-md-6 text-start">
+          <h5 class="highlight">SO MUCH CARE WENT INTO CREATING YOUR HEART♥ROCK</h5>
+          <p>We sift through hundreds of river rocks, selecting only the best. Each is washed, dried and we affixed <em>your selected heart</em> to the perfect rock for its size and shape.</p>
+          <p>Lastly, your Heart Rock was slipped into its organza bag, with accompanying hang tag, and shipped off to its new owner — we hope you love it as much as we did handcrafting it!</p>
+          <p class="fw-bold">From our heart to yours, Whitney & Howard</p>
+          <p><small>HANDCRAFTED WITH INTENTION | PROUDLY AMERICAN MADE</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Listing Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <label class="form-label mb-0 fw-bold">Filter:</label>
+          <select class="form-select form-select-sm w-auto d-inline-block ms-2">
+            <option selected>Availability</option>
+            <option>In Stock</option>
+            <option>Out of Stock</option>
+          </select>
+        </div>
+        <div>
+          <label class="form-label mb-0 fw-bold">Sort by:</label>
+          <select class="form-select form-select-sm w-auto d-inline-block ms-2">
+            <option selected>Featured</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- Product 1 -->
+        <div class="col">
+          <div class="card h-100 text-center">
+            <img src="https://www.whitneyhowarddesigns.com/cdn/shop/products/foreverinmyheart-petmemorialjewelry.jpg?v=1607712687" class="card-img-top" alt="Pet Memorial Stone">
+            <div class="card-body d-flex flex-column">
+              <h6 class="card-title text-decoration-underline">Pet Memorial Stone Forever in my Heart | Pet Memorial Gifts</h6>
+              <p>★★★★★ (8)</p>
+              <p class="fw-bold">Rs.5,200.00 PKR</p>
+              <button class="btn btn-outline-primary mt-auto">Add to cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col">
+          <div class="card h-100 text-center">
+            <img src="https://www.whitneyhowarddesigns.com/cdn/shop/products/WhitneyHowarDesigns_Giftshoppets.jpg?v=1579915686" class="card-img-top" alt="Paw Print Rock">
+            <div class="card-body d-flex flex-column">
+              <h6 class="card-title">Pet Memorial Gift In Loving Memory Paw Print Rock</h6>
+              <p>★★★★★ (9)</p>
+              <p class="fw-bold">Rs.5,200.00 PKR</p>
+              <button class="btn btn-outline-primary mt-auto">Add to cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col">
+          <div class="card h-100 text-center">
+            <img src="https://www.whitneyhowarddesigns.com/cdn/shop/products/FUR-EV.png?v=1675290238" class="card-img-top" alt="Blessing Ring Envelope">
+            <div class="card-body d-flex flex-column">
+              <h6 class="card-title">Furever Love Blessing Ring Envelope</h6>
+              <p class="fw-bold">Rs.1,800.00 PKR</p>
+              <button class="btn btn-outline-primary mt-auto">Add to cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col">
+          <div class="card h-100 text-center">
+            <img src="https://www.whitneyhowarddesigns.com/cdn/shop/products/FUR_Pair.png?v=1682011498" class="card-img-top" alt="Furever Love Blessing Ring">
+            <div class="card-body d-flex flex-column">
+              <h6 class="card-title">Furever Love, Always in the heart Blessing Ring</h6>
+              <p class="fw-bold">From Rs.1,200.00 PKR</p>
+              <button class="btn btn-outline-primary mt-auto">Choose options</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Drawer -->
+  <div id="cartDrawer" class="position-fixed top-0 end-0 bg-white shadow p-4" style="width: 400px; height: 100%; z-index: 1050; transform: translateX(100%); transition: transform 0.4s ease;">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h5>Your Cart</h5>
+      <button class="btn-close" onclick="toggleCart(false)"></button>
+    </div>
+    <div id="cartItems"></div>
+    <div class="mt-3 border-top pt-3">
+      <strong>Subtotal:</strong> Rs.<span id="cartTotal">0.00</span> PKR
+      <button class="btn btn-primary w-100 mt-3">Check Out</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleCart(show) {
+      const drawer = document.getElementById('cartDrawer');
+      drawer.style.transform = show ? 'translateX(0)' : 'translateX(100%)';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const cartItems = document.getElementById('cartItems');
+      const cartTotal = document.getElementById('cartTotal');
+
+      const items = [
+        { name: 'Pet Memorial Stone', price: 5200, image: 'https://www.whitneyhowarddesigns.com/cdn/shop/products/foreverinmyheart-petmemorialjewelry.jpg?v=1607712687' },
+        { name: 'Paw Print Rock', price: 5200, image: 'https://www.whitneyhowarddesigns.com/cdn/shop/products/WhitneyHowarDesigns_Giftshoppets.jpg?v=1579915686' }
+      ];
+
+      let total = 0;
+      items.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'd-flex align-items-center cart-item';
+        div.innerHTML = `
+          <img src="${item.image}" class="cart-item-img me-3">
+          <div>
+            <div class="fw-bold">${item.name}</div>
+            <div>Rs.${item.price.toLocaleString()} PKR</div>
+          </div>
+        `;
+        cartItems.appendChild(div);
+        total += item.price;
+      });
+
+      cartTotal.textContent = total.toLocaleString();
+    });
+  </script>
+</body>
+</html>
